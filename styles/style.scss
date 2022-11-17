@@ -1,0 +1,420 @@
+@import "./global";
+
+.block {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  background-color: $bgColor;
+  padding: 20px;
+  gap: 20px;
+  position: relative;
+  .menu_profill {
+    width: 25%;
+    @include dfc();
+    background-color: $bgWhite;
+    border-radius: 10px;
+    padding: 50px 100px;
+    .profill_img {
+      width: 100%;
+      @include dfc();
+      a {
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: $bgColor;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+      b {
+        width: 100%;
+        font-weight: 700;
+        font-size: $fontSize16;
+        text-align: center;
+        margin-top: 10px;
+        letter-spacing: 0.7px;
+        border-bottom: 2px solid $bgColor;
+      }
+    }
+    .menu {
+      width: 100%;
+      @include dfc();
+      padding: 50px 0 0 0;
+      gap: 25px;
+      .menu_lists {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: 0.4s;
+        gap: 25px;
+        i {
+          padding: 10px;
+          font-size: $fontSize24;
+          border-radius: 10px;
+          background-color: $bgColor;
+          color: $bgWhite;
+          transition: 0.4s;
+        }
+        .menu_links {
+          font-weight: 600;
+          font-size: $fontSize16;
+          letter-spacing: 0.7px;
+          color: $textBlack;
+          transition: 0.4s;
+        }
+        &:hover {
+          background-color: $bgColor;
+          .menu_links {
+            color: $bgWhite;
+          }
+        }
+      }
+      .fire {
+        background-color: $bgColor;
+        .menu_links {
+          color: $bgWhite;
+        }
+      }
+    }
+    .delivery {
+      width: 100%;
+      @include dfc();
+      padding: 20px;
+      border-radius: 10px;
+      background-color: $bgColor;
+      margin-top: 120px;
+      position: relative;
+      img {
+        width: 85%;
+        position: absolute;
+        top: -120px;
+        z-index: 10;
+      }
+      b {
+        margin-top: 100px;
+        font-weight: 600;
+        font-size: $fontSize18;
+        letter-spacing: 0.7px;
+        color: $bgWhite;
+      }
+      a {
+        font-weight: 600;
+        font-size: $fontSize14;
+        letter-spacing: 0.7px;
+        margin-top: 20px;
+        color: $bgColor;
+        background-color: $bgWhite;
+        border-radius: 10px;
+        padding: 5px 10px;
+        transition: 0.4s;
+        &:hover {
+          color: $bgRed;
+        }
+      }
+    }
+  }
+  .all_items {
+    width: 75%;
+    @include dfa();
+    background-color: $bgWhite;
+    border-radius: 10px;
+    padding: 50px;
+    .nav_title {
+      width: 100%;
+      @include dja();
+      h1 {
+        font-weight: 800;
+        font-size: $fontSize48;
+      }
+      form {
+        width: 30%;
+        @include daj();
+        position: relative;
+        input {
+          width: 100%;
+          outline: none;
+          padding: 10px 15px 10px 35px;
+          border-radius: 10px;
+          border: 1px solid $textBlack;
+          font-size: $fontSize14;
+          font-weight: 500;
+        }
+        i {
+          position: absolute;
+          font-size: $fontSize18;
+          font-weight: 600;
+          left: 10px;
+        }
+      }
+      .cart {
+        background-color: $bgColor;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          font-size: $fontSize24;
+          color: $bgWhite;
+        }
+      }
+    }
+    .foods_text {
+      width: 100%;
+      @include dja();
+      gap: 20px;
+      padding: 50px 0 0 0;
+      .meals {
+        width: 70%;
+        @include dfa();
+        .fas_food {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .food_box {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 50px;
+            background-color: $bgWhite;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 25px 5px 10px 5px;
+            b {
+              font-weight: 600;
+              letter-spacing: 0.7px;
+              font-size: $fontSize18;
+              color: $textBlack;
+            }
+            img {
+              width: 80px;
+              height: 100px;
+              margin: 5px 0;
+            }
+            p {
+              font-weight: 500;
+              letter-spacing: 0.7px;
+              font-size: $fontSize16;
+              color: $textGray;
+            }
+            i {
+              font-size: $fontSize24;
+              margin-top: 5px;
+              cursor: pointer;
+            }
+          }
+        }
+        .category {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          margin-top: 50px;
+          h2 {
+            font-weight: 800;
+            font-size: $fontSize30;
+            letter-spacing: 0.7px;
+            color: $textBlack;
+          }
+          i {
+            font-weight: 500;
+            font-size: $fontSize24;
+            margin-left: 10px;
+            cursor: pointer;
+          }
+        }
+        .slider_card {
+          width: 100%;
+          margin-top: 110px;
+          @include dja();
+          gap: 20px;
+          .card_box {
+            width: 25%;
+            @include dfa();
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 40px;
+            padding: 10px 30px;
+            position: relative;
+            img {
+              position: absolute;
+              top: -95px;
+              width: 200px;
+              height: 200px;
+              left: 0;
+            }
+            b {
+              font-weight: 700;
+              font-size: $fontSize16;
+              letter-spacing: 0.7px;
+              margin-top: 70px;
+              color: $textBlack;
+            }
+            p {
+              font-weight: 400;
+              font-size: $fontSize14;
+              letter-spacing: 0.7px;
+              margin-top: 5px;
+              color: $textGray;
+            }
+            .prices {
+              width: 100%;
+              @include daj();
+              margin-top: 20px;
+              small {
+                font-weight: 600;
+                letter-spacing: 0.7px;
+                font-size: $fontSize18;
+                color: $textBlack;
+              }
+              i {
+                font-size: $fontSize30;
+                cursor: pointer;
+              }
+            }
+            .fire_like {
+              position: absolute;
+              top: 0;
+              right: 0;
+              font-size: $fontSize20;
+              padding: 3px;
+              border-radius: 50%;
+              background-color: $bgRed;
+              color: $bgWhite;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .coments {
+        width: 30%;
+        @include dfa();
+        .sale {
+          width: 100%;
+          @include dfa();
+          background-color: $bgColor;
+          border-radius: 40px;
+          padding: 10px 50px;
+          margin-top: 50px;
+          position: relative;
+          img {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: -95px;
+            right: 30px;
+          }
+          b {
+            font-weight: 700;
+            font-size: $fontSize30;
+            letter-spacing: 0.7px;
+            color: $bgWhite;
+            margin-top: 50px;
+          }
+          p {
+            font-weight: 400;
+            font-size: $fontSize16;
+            letter-spacing: 0.7px;
+            margin-top: 5px;
+            color: $bgWhite;
+          }
+        }
+        .comment_title {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          margin-top: 50px;
+          h3 {
+            font-weight: 800;
+            font-size: $fontSize30;
+            letter-spacing: 0.7px;
+            color: $textBlack;
+          }
+          i {
+            font-size: $fontSize30;
+            margin-left: 10px;
+            color: $bgRed;
+            margin-bottom: 5px;
+          }
+        }
+        .comment_texts {
+          width: 100%;
+          @include dfa();
+          margin-top: 10px;
+          .text_box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-top: 20px;
+            padding: 10px;
+            .imag {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #fff0a5;
+              padding: 15px;
+              border-radius: 10px;
+              img {
+                width: 40px;
+                height: 40px;
+              }
+            }
+            .text_side {
+              @include dfa();
+              margin-left: 15px;
+              small {
+                font-weight: 600;
+                font-size: $fontSize14;
+                letter-spacing: 0.7px;
+                color: $textBlack;
+              }
+              .reactions_like {
+                display: flex;
+                align-items: center;
+                margin-top: 5px;
+                i {
+                  font-size: $fontSize20;
+                  &:nth-child(1) {
+                    color: #0ff;
+                  }
+                  &:nth-child(2) {
+                    color: #0f0;
+                  }
+                  &:nth-child(3) {
+                    color: #f00;
+                  }
+                }
+                p {
+                  font-weight: 400;
+                  font-size: $fontSize12;
+                  margin-top: 5px;
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  width: 100%;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: $fontSize16;
+  color: $bgWhite;
+  letter-spacing: 0.7px;
+}
